@@ -125,7 +125,6 @@
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  
 }
 
 .content__cards-item {
@@ -434,5 +433,4 @@
   .card__content {
     padding: 25px;
   }
-
 }
