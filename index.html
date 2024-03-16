@@ -7,8 +7,8 @@
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
-    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
@@ -18,8 +18,8 @@
   </head>
   <body class="page">
     <header class="header header-desktop">
-      <h1 class="header__title">&lt;/HTML&gt;</h1>
-      <h2 class="header__subtitle">закрывающий тег</h2>
+      <a class="header__logo">&lt;/HTML&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -559,26 +559,27 @@
       <button
         type="button"
         class="save-button animated-button"
-        onclick="window['dialog-form'].showModal()"
-        aria-controls="dialog-form"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="id"
       >
         <svg class="save-button__icon" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text"> Сохранить на память </span>
       </button>
-      <dialog id="dialog-form" class="form">
+      <dialog id="dialog-id" class="dialog">
         <svg class="save-button__icon" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
-        <button
-          type="button"
-          class="dialog__button animated-button"
-          onclick="window['dialog-form'].close()"
-        >
-          <span class="button__text">Оk</span>
-        </button>
+        <form class="dialog__form" method="dialog">
+          <button
+            type="submit"
+            class="dialog__button animated-button"
+          >
+            <span class="button__text">Оk</span>
+          </button>
+        </form>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
